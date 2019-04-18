@@ -1,0 +1,154 @@
+/* General Styling */
+header, footer, main{
+  background-color: #ffb3ba;
+}
+h1 {
+  color: black;
+  font: 48px/150% "Staatliches", cursive;
+}
+
+h2 {
+  color: grey;
+  font: 32px/150% "Staatliches", cursive;
+}
+
+h3 {
+  color: grey;
+  font: 24px/150% "Staatliches", cursive;
+}
+
+p,li {
+  font: 18px/150% 'Proza Libre', sans-serif;
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+/* skip to content link for keyboard users */
+.skip_link a{
+  padding 10px;
+  font: 1em/150% "Staatliches", cursive;
+  position: absolute;
+  text-decoration: none;
+  background-color: #ffb3ba;
+  top: -40px;
+  left: 0px;
+  color: black;
+  border-right:1px solid black;
+	border-bottom:1px solid black;
+  border-bottom-right-radius:8px;
+  border-bottom-left-radius:8px;
+  -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 100;
+}
+.skip_link a:focus{
+  position: absolute;
+  top: 0px;
+}
+
+/* Navigation Bar */
+.topnav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.topnav a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  padding: 0 1%;
+  font: 1.5em/45px "Staatliches", cursive;
+}
+.topnav a:hover, a:focus {
+  text-decoration: underline;
+}
+
+.topnav a.active {
+  text-decoration: underline;
+  color: white;
+}
+/* Homepage Bio Section */
+div.bio {
+  width: 50%;
+}
+
+/* Skills */
+.icon {
+  color: grey;
+  font-size: 2em;
+}
+div.skills_container {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 10px 5px;
+  justify-content: center;
+}
+.skills_container ul {
+  list-style: none
+}
+.skill {
+  padding: 5%;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.skill p {
+  margin-bottom: 2em;
+}
+
+/* Project Gallery */
+.projects_container{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 40% 40% 40%;
+  grid-gap: 10px 5px;
+  justify-items: center;
+}
+
+.project {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top, margin-bottom: 5px;
+  margin-left, margin-right: 3px;
+  padding: 3px;
+}
+
+/* Contact */
+.contact {
+  background: url("../images/network.jpg");
+}
+
+/* Responzive Layout */
+@media screen and (max-device-width: 750px){
+  div.skills_container {
+    grid-template-columns: 95%;
+    grid-template-rows: 50% 50% 50%;
+  }
+
+  div.projects_container {
+    grid-template-columns: 95%;
+    grid-template-rows: 50% 50% 50%;
+  }
+
+}
+
+@media screen and (max-device-width: 1024px){
+  div.skills_container {
+    grid-template-columns: 47% 47%;
+    grid-template-rows: 50% 50% 50% 50%;
+  }
+
+  div.projects_container {
+    grid-template-columns: 47% 47%;
+    grid-template-rows: 50% 50% 50% 50%;
+  }
+}
