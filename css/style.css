@@ -8,18 +8,18 @@ h1 {
 }
 
 h2 {
-  color: grey;
+  color: #545454;
   font: 32px/150% "Staatliches", cursive;
 }
 
 h3 {
-  color: grey;
+  color: #545454;
   font: 24px/150% "Staatliches", cursive;
 }
 
 p,li {
   font: 18px/150% 'Proza Libre', sans-serif;
-  color: white;
+  color: black;
 }
 
 a:visited {
