@@ -65,6 +65,7 @@ function checkForm(){
       var valid = true
       var name = document.getElementById('nameInput').value
       var emailAddress = document.getElementById('emailInput').value
+      console.log(emailAddress.match('\w+@\w+'))
       if(name === ""){
         valid = false
         document.getElementById('nameError').style.display = 'block'
@@ -77,12 +78,13 @@ function checkForm(){
         document.getElementById('addressError').style.display = 'block'
         document.getElementById('invalidInputError').style.display = 'none'
       }
-      else if (!emailAddress.match('\w+@\w+')){
+      else if (emailAddress.match(/\w+@\w+/) === null ){
         valid = false
         document.getElementById('invalidInputError').style.display = 'block'
         document.getElementById('addressError').style.display = 'none'
       }
       else{
+        console.log('hi')
         document.getElementById('addressError').style.display = 'none'
         document.getElementById('invalidInputError').style.display = 'none'
       }
