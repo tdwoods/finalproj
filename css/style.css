@@ -22,6 +22,9 @@ p,li {
   color: black;
 }
 
+a {
+  color: black;
+}
 a:visited {
   color: #ee42f4;
 }
@@ -80,7 +83,7 @@ div.bio {
 
 /* Skills */
 .icon {
-  color: grey;
+  color: #545454;
   font-size: 2em;
 }
 .skills_container {
@@ -261,4 +264,5 @@ div.bio {
   div.bio {
     width: 100%
   }
+
 }
