@@ -54,6 +54,7 @@ a:visited {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-end;
+  z-index: 100;
 }
 
 .topnav a {
@@ -118,6 +119,39 @@ div.bio {
   right: 5px;
   cursor: pointer;
 }
+/* experiences */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.accactive, .accordion:hover {
+  background-color: #ccc;
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.accactive:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+.experience {
+  display: none;
+  padding: 0 10px;
+  background-color: lightgrey;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
 /* Project Gallery */
 .projects_container {
   display: grid;
@@ -165,7 +199,29 @@ div.bio {
   background-color: #bbb;
   transform: rotateY(180deg);
 }
+.project-back p {
+  font-size: 2.1vw;
+}
+/* Form */
+.contactForm {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 5px;
+  position: relative;
+  left: 15px;
+  border: 3px solid white;
+}
+/* Custom Form Validation */
+.errorMsg {
+        color:red;
+        display:none;
+}
 
+/*Video*/
+.inkVideo {
+  width: 100%;
+  height: auto;
+}
 /* Responsive Layout */
 
 @media only screen and (max-width: 1000px){
@@ -177,6 +233,9 @@ div.bio {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
+  .project-back p {
+    font-size: 3vw;
+  }
 }
 
 @media only screen and (max-width: 750px){
@@ -187,5 +246,8 @@ div.bio {
   .projects_container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 2fr);
+  }
+  .project-back p {
+    font-size: 6vw;
   }
 }

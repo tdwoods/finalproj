@@ -20,34 +20,34 @@
 </header>
   <main id='content'>
     <h1>Class Experience</h1>
+    <button class="accordion" name="section1"><h2>EECS 280</h2></button>
     <div class="experience">
-      <h2>EECS 280</h2>
       <p>Techniques and algorithm development and effective programming, top-down analysis, structured programming, testing, and program correctness. Program language syntax and static and runtime semantics. Scope, procedure instantiation, recursion, abstract data types, and parameter passing methods. Structured data types, pointers, linked data structures, stacks, queues, arrays, records, and trees.</p>
       <p>Skills: C++, AI, Object-Oriented-Programming, Recursion, ADT</p>
     </div>
+    <button class="accordion" name="section2"><h2>SI 330</h2></button>
     <div class="experience">
-      <h2>SI 330</h2>
       <p>My main goal in this course is to help you get started with your own data harvesting, processing, and aggregation. Data analysis is crucial to evaluating and designing solutions and applications, as well as understanding users' information needs and how they may want to use it. In many cases, the data we need to access is distributed online among many Web pages, stored in a database, or available in a large text file. Often these data (e.g., Web server logs) are too large to obtain and/or process manually. Instead, we need an automated way to gather the data, parse it, and summarize it before we can do more advanced analysis. In this course, you will have the opportunity to learn to use Python and its modules to accomplish these tasks in a quick and easy, yet useful and repeatable, way.</p>
       <p>Skills: Python, AWS, Databrick, Data-Scraping, NLP, Data Analysis, SQL, Pandas</p>
     </div>
+    <button class="accordion" name="section3"><h2>SI 339</h2></button>
     <div class="experience">
-      <h2>SI 339</h2>
       <p>This course provides a hands-on approach to learning responsive, accessible front-end programming for Web Design. Topics covered include HTML5, CSS3, JavaScript, jQuery, additional frameworks, and the POUR design principles of accessible design.</p>
       <p>Skills: HTML, CSS, Javascript, jQuery, UI/UX Design Principles</p>
     </div>
+    <button class="accordion" name="section4"><h2>SI 350</h2></button>
     <div class="experience">
-      <h2>SI 350</h2>
       <p>This course provides a hands-on approach to learning responsive, accessible front-end programming for Web Design. Topics covered include HTML5, CSS3, JavaScript, jQuery, additional frameworks, and the POUR design principles of accessible design.</p>
       <p>Skills: UX Research, Citizen Interaction Design</p>
     </div>
+    <button class="accordion" name="section5"><h2>SI 364</h2></button>
     <div class="experience">
-      <h2>SI 364</h2>
       <p>This course is, as the title describes, about building interactive web applications. You'll learn what a web application is, basic tenets of building one on the current modern web, design patterns for building an application, and how to use a web application to interact with data and build a web application so it can interact with input data and store data. You'll learn about making data show up on web pages in a complex application, storing and organizing complex data in a database for a web application, developing a web application locally, and deploying an interactive application to the internet, among other things.</p>
       <p>Skills: Python, Flask, SQLAlchemy, HTML</p>
     </div>
     <h1>Work Experience</h1>
+    <button class="accordion" name="section5"><h2> Software Developer Intern</h2></button>
     <div class='experience'>
-      <h2> Software Developer Intern</h2>
       <h3> Eview 360 - Farmington Hills, MI </h3>
       <p>Launched analytics platform designed for retail spaces using Python, delivering meaningful and comprehensive metrics to track customer engagement. Consulted with design team on digital marketing application, optimizing information architecture to remove clutter and usability of setup procedure. Designed native YouTube playback functionality into digital marketing application in C#, enabling support for playlist and single video playback of custom media</p>
       <p>Skills: Python, C#, Xamarin.Android, Linux</p>
@@ -58,3 +58,27 @@
 </footer>
 </body>
 </html>
+<script>
+  var accordions = document.getElementsByClassName('accordion')
+  function openAccordion(){
+    var experience = this.nextElementSibling;
+    console.log(!(experience.style.display === 'block'))
+    this.classList.toggle("accactive");
+    if (!(experience.style.display === 'block')){
+      experience.style.display = "block"
+    }
+    else {
+      experience.style.display = 'none'
+    }
+    if (experience.style.maxHeight){
+      experience.style.maxHeight = null;
+    } else {
+      experience.style.maxHeight = experience.scrollHeight + "px";
+    }
+  }
+  for(var x = 0; x < accordions.length; x++){
+    accordions[x].addEventListener("click", openAccordion)
+  }
+</script>
+<script src = 'js/stickynav.js'>
+</script>

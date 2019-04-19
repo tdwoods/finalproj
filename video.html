@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proza+Libre|Staatliches">
+    <title>Video Page</title>
+  </head>
+  <body>
+    <header>
+      <div class="skip_link"><a href="#content">Skip to Content</a></div>
+      <nav class="topnav">
+          <a href="index.html">Home</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a class = "active" href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main id='content'>
+    <h1>Form Submitted!</h1>
+    <video class = 'inkVideo' id = "myVideo" src="images/ink.mp4" controls>
+    </video>
+    <button type="button" name="button1" id = 'videoControl'>Remove Controls</button>
+    <button type="button" name="button" id = "videoLoop">Turn Looping On</button>
+    <button type="button" name="button" id = "videoRestart">Restart Video</button>
+    </main>
+    <footer>
+      Designed and Built by Trevor Woods
+    </footer>
+  </body>
+</html>
+<script>
+var video = document.getElementById("myVideo")
+var controlButton = document.getElementById("videoControl")
+var controlClicked = false
+var loopButton = document.getElementById("videoLoop")
+var loopClicked = false
+var restartButton = document.getElementById("videoRestart")
+video.addEventListener("ended", replayVideo)
+function replayVideo(event){
+  console.log("hi")
+}
+
+controlButton.addEventListener("click", function(){
+  if (!controlClicked){
+    video.controls = false
+    controlClicked = true
+    controlButton.style.backgroundColor = "green"
+  }
+  else {
+    video.controls = true
+    controlClicked = false
+    controlButton.style.backgroundColor = "buttonface"
+  }
+})
+
+loopButton.addEventListener("click", function(){
+  if (!loopClicked){
+    video.loop = true
+    loopClicked = true
+    loopButton.style.backgroundColor = "green"
+  }
+  else {
+    video.loop = false
+    loopClicked = false
+    loopButton.style.backgroundColor = "buttonface"
+  }
+})
+restartButton.addEventListener("click", function(){
+  video.currentTime = 0
+  video.play()
+})
+</script>
+<script src = 'js/stickynav.js'>
+</script>
