@@ -82,3 +82,10 @@
 </script>
 <script src = 'js/stickynav.js'>
 </script>
+
+<script>
+  var elements = document.getElementsByClassName('accordion')
+  for(var x = 0; x < elements.length; x++){
+    elements[x].tabIndex = toString(x + 6)
+  }
+</script>
