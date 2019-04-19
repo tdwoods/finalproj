@@ -23,7 +23,7 @@ p,li {
 }
 
 a:visited {
-  color: white;
+  color: #ee42f4;
 }
 /* skip to content link for keyboard users */
 .skip_link a{
