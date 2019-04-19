@@ -187,6 +187,10 @@ div.bio {
   transform-style: preserve-3d;
 }
 
+.project-inner p {
+  color: white;
+}
+
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .project:hover .project-inner {
   transform: rotateY(180deg);
