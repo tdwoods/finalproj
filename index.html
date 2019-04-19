@@ -69,9 +69,20 @@
         </ul>
       </div>
     </div>
+    <div class="callout" id = 'myCallout'>
+      <p>Hey, want to get in touch with me? <a href="contact.html">Contact me</a> now!</p>
+      <button type="button" name="close" class = "close_button" onclick="closeCallout(this)"> X </button>
+      </div>
+    </div>
+
   </main>
-<footer>
-  Designed and Built by Trevor Woods
-</footer>
+  <footer>
+    Designed and Built by Trevor Woods
+  </footer>
 </body>
 </html>
+<script type="text/javascript">
+  function closeCallout(){
+    document.getElementById('myCallout').style.display = 'none'
+  }
+</script>
